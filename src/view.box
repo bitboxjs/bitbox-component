@@ -1,0 +1,13 @@
+import bitbox from 'bitbox'
+import {div,h1,input} from 'bitbox/elements'
+
+export default bitbox(({ state, signals }) => {
+
+	const onInput = (e) => signals.message({ value: e.target.value })
+
+	<demo return new>
+		<h1>state.message</h1>
+		<input on-input value=state.message />
+	</demo>
+
+})

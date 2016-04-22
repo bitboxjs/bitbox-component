@@ -1,0 +1,21 @@
+{
+  "name": "bitbox-component",
+  "version": "1.0.0",
+  "description": "bitbox component demo",
+  "keywords": [
+      "bitbox",
+      "bitbox component",
+      "bitbox demo"
+  ],
+  "main": "index.js",
+  "registry": "npm",
+  "jspmPackage": true,
+  "format": "amd",
+  "author": "Sergiu Toderascu <sergiu.toderascu@gmail.com> (http://bitboxjs.com)",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bitboxjs/bitbox-component"
+  },
+  "homepage": "http://bitboxjs.com"
+}

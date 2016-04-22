@@ -1,0 +1,33 @@
+{
+    "jspm": {
+        "name": "bitbox-component",
+        "main": "index.js",
+        "directories": {
+            "lib": "src"
+        },
+        "dependencies": {
+            "bitbox": "npm:bitbox@^1.0.29"
+        },
+        "devDependencies": {
+            "bitbox-transpiler": "npm:bitbox-transpiler@^1.0.2",
+            "fs": "github:jspm/nodelibs-fs@^0.2.0-alpha",
+            "net": "github:jspm/nodelibs-net@^0.2.0-alpha",
+            "plugin-babel": "npm:systemjs-plugin-babel@^0.0.9",
+            "process": "github:jspm/nodelibs-process@^0.2.0-alpha",
+            "systemjs-hot-reloader": "github:capaj/systemjs-hot-reloader@^0.5.7",
+            "tty": "github:jspm/nodelibs-tty@^0.2.0-alpha",
+            "util": "github:jspm/nodelibs-util@^0.2.0-alpha"
+        }
+    },
+    "devDependencies": {
+        "chokidar-socket-emitter": "^0.5.1",
+        "http-server": "^0.9.0",
+        "jspm": "^0.17.0-beta.13"
+    },
+    "scripts": {
+        "build:module": "jspm build bitbox-component dist/index.js --format umd --global-name demoModule --skip-source-maps",
+        "build:view": "jspm build bitbox-component/view.box - bitbox - bitbox/elements  dist/view.js --format umd --global-name demoView --global-deps \"{'bitbox':'bitbox', 'bitbox/elements':'bitbox_elements'}\" --skip-source-maps",
+        "build": "npm run build:module && npm run build:view",
+        "dist": "cp README.md ./dist && npm run build && npm publish ./dist"
+    }
+}

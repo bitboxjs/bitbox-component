@@ -1,0 +1,9 @@
+import bitbox from 'bitbox'
+import component from 'component/view.box'
+
+export default bitbox(app => {
+	<app return new>
+		<h1 new>`app`</h1>
+		<component:demo />
+	</app>
+})
