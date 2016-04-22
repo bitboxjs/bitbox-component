@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head>
+		<title>bitbox-component</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="theme-color" content="#000000">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+		<style> body { background: #eee; margin: 0; padding: 24px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: Roboto; font-size: 14px; }</style>
+		<script src="//bitboxjs.com/bitbox.js"></script>
+		<script src="//bitboxjs.com/elements.js"></script>
+		<script src="index.js"></script>
+		<script src="view.js"></script>
+	</head>
+	<body>
+		<script>
+			bitbox = bitbox.default
+
+			app = bitbox.app({})
+
+			app.addModules({
+				demo: demoModule()
+			})
+
+			main = bitbox(function() {
+				return bitbox_elements.div({}, [
+					demoView({
+						module: 'demo'
+					})
+				])
+			})
+
+			app.run(main, document.body)
+
+		</script>
+	</body>
+</html>

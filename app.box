@@ -1,5 +1,5 @@
 import bitbox from 'bitbox'
-import component from 'component/view.box'
+import component from 'bitbox-component/view.box'
 
 export default bitbox(app => {
 	<app return new>

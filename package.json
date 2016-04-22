@@ -28,6 +28,7 @@
         "build:module": "jspm build bitbox-component dist/index.js --format umd --global-name demoModule --skip-source-maps",
         "build:view": "jspm build bitbox-component/view.box - bitbox - bitbox/elements  dist/view.js --format umd --global-name demoView --global-deps \"{'bitbox':'bitbox', 'bitbox/elements':'bitbox_elements'}\" --skip-source-maps",
         "build": "npm run build:module && npm run build:view",
-        "dist": "cp README.md ./dist && npm run build && npm publish ./dist"
+        "deploy": "surge ./dist component.bitboxjs.com",
+        "dist": "cp README.md ./dist && npm run build && npm run deploy && npm publish ./dist"
     }
 }

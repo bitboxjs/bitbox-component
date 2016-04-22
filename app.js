@@ -1,5 +1,5 @@
 import bitbox from 'bitbox'
-import component from 'component'
+import component from 'bitbox-component'
 
 const app = bitbox.app({})
 
