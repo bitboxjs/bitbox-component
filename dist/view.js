@@ -10,13 +10,17 @@
 		var state = _ref.state;
 		var signals = _ref.signals;
 
+
 		var onInput = function onInput(e) {
 			return signals.message({
 				value: e.target.value
 			});
 		};
-		return bitbox.h('demo', {}, function ($tree) {
-			$tree.push(bitbox_elements.h1({}, state.message));
+
+		return bitbox_elements.div({}, function ($tree) {
+			$tree.push(bitbox_elements.h1({
+				color: [null, 500]
+			}, state.message));
 			$tree.push(bitbox_elements.input({
 				value: state.message,
 				on: {

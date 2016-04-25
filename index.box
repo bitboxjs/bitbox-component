@@ -3,7 +3,6 @@ import component from 'bitbox-component/view.box'
 
 export default bitbox(app => {
 	<app return new>
-		<h1 new>`app`</h1>
-		<component:demo />
+		<component:demo reload=(Date.now()) />
 	</app>
 })

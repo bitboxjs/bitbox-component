@@ -10,12 +10,10 @@
 	    var readyForMainLoad
 	    System.trace = true
 	    readyForMainLoad = System.import('systemjs-hot-reloader').then(function(HR){
-	    	hr = new HR.default()  // chokidar-socket-emitter port
+	    	System.hr = new HR.default()
 	    })
-	    Promise.resolve(readyForMainLoad).then(() => {
-	    	System.import('index.js').then(function (m) {
-	        	console.log('@ready', m);
-	    	})
+	    Promise.resolve(readyForMainLoad).then(function() {
+	    	System.import('index.js')
 	    })
 	</script>
 </body>

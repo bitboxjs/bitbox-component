@@ -1,8 +1,14 @@
 import bitbox from 'bitbox'
-import app from './app.js'
-import box from './app.box'
+import demo from 'bitbox-component'
+import index from './index.box'
+
+const app = bitbox.app({})
+
+app.addModules({
+	demo: demo()
+})
+
+app.render(index, document.body)
 
 /** hot reload hook */
 export const __reload = app.reload
-
-app.run(box, document.body)
