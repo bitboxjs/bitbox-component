@@ -1,6 +1,6 @@
 {
     "name": "bitbox-component",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "bitbox component demo",
     "keywords": [
         "bitbox",
@@ -12,7 +12,7 @@
     "jspmPackage": true,
     "format": "amd",
     "dependencies": {
-        "bitbox": "^1.0.29"
+        "bitbox": "^1.0.45"
     },
     "author": "Sergiu Toderascu <sergiu.toderascu@gmail.com> (http://bitboxjs.com)",
     "license": "ISC",

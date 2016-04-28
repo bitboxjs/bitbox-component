@@ -24,8 +24,8 @@ SystemJS.config({
         "github:*/*.json"
     ],
     map: {
-        "bitbox": "npm:bitbox@1.0.42",
-        "bitbox-transpiler": "npm:bitbox-transpiler@1.0.6",
+        "bitbox": "npm:bitbox@1.0.45",
+        "bitbox-transpiler": "npm:bitbox-transpiler@1.0.7",
         "fs": "github:jspm/nodelibs-fs@0.2.0-alpha",
         "net": "github:jspm/nodelibs-net@0.2.0-alpha",
         "plugin-babel": "npm:systemjs-plugin-babel@0.0.9",

@@ -1,13 +1,15 @@
 import bitbox from 'bitbox'
 import {div,h1,input} from 'bitbox/elements'
 
-export default bitbox(({ state, signals }) => {
+<demo({ state, signals }) export default>
 
 	const onInput = (e) => signals.message({ value: e.target.value })
 
-	<div return>
-		<h1 color=[null, 500]>state.message</h1>
-		<input on-input value=state.message />
+	<div padding=16 margin=8 bg=['grey', 100] font=[18, 'Menlo']>
+
+		<h1 color=['teal', 500]>state.message</h1>
+		<input padding=8 on-input value=state.message border=[2, 'solid', null] -outline />
+
 	</div>
 
-})
+</demo>

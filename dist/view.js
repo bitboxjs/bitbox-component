@@ -4,9 +4,7 @@
 	(global.demoView = factory(global.bitbox,global.bitbox_elements));
 }(this, function (bitbox,bitbox_elements) { 'use strict';
 
-	bitbox = 'default' in bitbox ? bitbox['default'] : bitbox;
-
-	var view = bitbox(function (_ref) {
+	function demo(_ref) {
 		var state = _ref.state;
 		var signals = _ref.signals;
 
@@ -17,20 +15,29 @@
 			});
 		};
 
-		return bitbox_elements.div({}, function ($tree) {
+		return bitbox_elements.div({
+			padding: 16,
+			margin: 8,
+			bg: ['grey', 100],
+			font: [18, 'Menlo']
+		}, function ($tree) {
+
 			$tree.push(bitbox_elements.h1({
-				color: [null, 500]
+				color: ['teal', 500]
 			}, state.message));
 			$tree.push(bitbox_elements.input({
+				padding: 8,
 				value: state.message,
+				border: [2, 'solid', null],
+				outline: 0,
 				on: {
 					input: onInput
 				}
 			}));
 			return $tree;
 		}([]));
-	});
+	}
 
-	return view;
+	return demo;
 
 }));

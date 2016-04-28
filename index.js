@@ -1,14 +1,17 @@
 import bitbox from 'bitbox'
 import demo from 'bitbox-component'
-import index from './index.box'
 
-const app = bitbox.app({})
+export default bitbox.app()
 
-app.addModules({
-	demo: demo()
+bitbox.modules({
+	demo: demo({
+		message: 'wazzup?'
+	})
 })
 
-app.render(index, document.body)
+bitbox(app => demo({
+	module: 'demo'
+}))
 
 /** hot reload hook */
-export const __reload = app.reload
+export const __reload = (m) => bitbox.set(m.default.get())

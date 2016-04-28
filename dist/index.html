@@ -6,29 +6,28 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="mobile-web-app-capable" content="yes">
 		<script src="//bitboxjs.com/global.js"></script>
-		<script src="//bitboxjs.com/elements.js"></script>
 		<script src="index.js"></script>
-		<script src="view.js"></script>
 	</head>
 	<body>
 		<script type="bitbox">
 
-			const demo = demoView
+			component = bitbox_component.default
 
-			app = bitbox.app({})
+			<bitbox.app />
 
-			app.addModules({
-				demo: demoModule()
-			})
+			<bitbox.modules
+				one=(component({ message: 'one' }))
+				two=(component({ message: 'two' }))
+			/>
 
-			<view()>
-				<div padding=24 bg=["grey", 200]>
-					<h1 text>Demo Component</h1>
-					<demo:demo />
-				</div>
-			</view>
-
-			app.render(view, document.body)
+			<bitbox>
+				<demo(app)>
+					<main>
+						<component:one />
+						<component:two />
+					</main>
+				</demo>
+			</bitbox>
 
 		</script>
 	</body>

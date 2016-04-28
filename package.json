@@ -25,9 +25,8 @@
         "jspm": "^0.17.0-beta.13"
     },
     "scripts": {
-        "build:module": "jspm build bitbox-component dist/index.js --format umd --global-name demoModule --skip-source-maps",
-        "build:view": "jspm build bitbox-component/view.box - bitbox - bitbox/elements  dist/view.js --format umd --global-name demoView --global-deps \"{'bitbox':'bitbox', 'bitbox/elements':'bitbox_elements'}\" --skip-source-maps",
-        "build": "npm run build:module && npm run build:view",
+        "build:module": "jspm build bitbox-component - bitbox - bitbox/elements dist/index.js --format umd --global-name bitbox_component --global-deps \"{'bitbox':'bitbox','bitbox/elements':'bitbox.elements'}\" --skip-source-maps",
+        "build": "npm run build:module",
         "deploy": "surge ./dist component.bitboxjs.com",
         "dist": "cp README.md ./dist && npm run build && npm run deploy && npm publish ./dist",
         "postinstall": "jspm install && npm start"
